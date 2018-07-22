@@ -1,0 +1,83 @@
+____________________________
+java.lang.NullPointerException
+ at com.xpn.xwiki.web.Utils.getContextComponentManager(Utils.java:695)
+ at com.xpn.xwiki.web.Utils.getComponent(Utils.java:752)
+ at com.xpn.xwiki.web.Utils.getComponent(Utils.java:719)
+ at com.xpn.xwiki.web.XWikiRequestProcessor.processPath(XWikiRequestProcessor.java:47)
+ at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:154)
+ at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1913)
+ at org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:449)
+ at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+ at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+ at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:769)
+ 
+____________________________
+org.xwiki.component.manager.ComponentLookupException: Failed to lookup component [role = [interface org.xwiki.observation.EventListener] hint = [lessColorTheme]]
+ at org.xwiki.component.embed.EmbeddableComponentManager.getInstanceMap(EmbeddableComponentManager.java:216) 
+____________________________
+Caused by: org.xwiki.component.manager.ComponentLookupException: Failed to lookup component [org.xwiki.lesscss.internal.cache.DefaultLESSResourcesCache] identified by [role = [interface org.xwiki.lesscss.internal.cache.LESSResourcesCache] hint = [default]]
+ at org.xwiki.component.embed.EmbeddableComponentManager.getComponentInstance(EmbeddableComponentManager.java:394) 
+____________________________
+Caused by: org.infinispan.commons.CacheException: Unable to invoke method public void org.infinispan.persistence.manager.PersistenceManagerImpl.start() on object of type PersistenceManagerImpl
+ at org.infinispan.commons.util.ReflectionUtil.invokeAccessibly(ReflectionUtil.java:170) 
+____________________________
+Caused by: org.infinispan.commons.CacheException: Unable to start cache loaders
+ at org.infinispan.persistence.manager.PersistenceManagerImpl.start(PersistenceManagerImpl.java:160) 
+____________________________
+Caused by: org.infinispan.persistence.spi.PersistenceException: org.infinispan.persistence.spi.PersistenceException: ISPN000279: Failed to read stored entries from file. Error in file /var/folders/kr/5zlgf_ts25g577yt5qg66_nh0000gp/T/xwiki/lesscss.skinfiles.cache.dat at offset 426784
+ at org.infinispan.persistence.file.SingleFileStore.start(SingleFileStore.java:127) 
+____________________________
+Caused by: org.infinispan.persistence.spi.PersistenceException: ISPN000279: Failed to read stored entries from file. Error in file /var/folders/kr/5zlgf_ts25g577yt5qg66_nh0000gp/T/xwiki/lesscss.skinfiles.cache.dat at offset 426784
+ at org.infinispan.persistence.file.SingleFileStore.rebuildIndex(SingleFileStore.java:187) 
+____________________________
+java.lang.NullPointerException
+ at com.xpn.xwiki.web.Utils.getContextComponentManager(Utils.java:695)
+ at com.xpn.xwiki.web.Utils.getComponent(Utils.java:752)
+ at com.xpn.xwiki.web.Utils.getComponent(Utils.java:719)
+ at com.xpn.xwiki.web.XWikiRequestProcessor.processPath(XWikiRequestProcessor.java:47)
+ at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:154)
+ at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1913)
+ at org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:449)
+ at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+ at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+ at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:769)
+ 
+____________________________
+java.lang.NullPointerException
+ at com.xpn.xwiki.web.Utils.getContextComponentManager(Utils.java:695)
+ at com.xpn.xwiki.web.Utils.getComponent(Utils.java:752)
+ at com.xpn.xwiki.web.Utils.getComponent(Utils.java:719)
+ at com.xpn.xwiki.web.XWikiRequestProcessor.processPath(XWikiRequestProcessor.java:47)
+ at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:154)
+ at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1913)
+ at org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:449)
+ at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+ at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+ at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:769)
+ 
+____________________________
+java.lang.NullPointerException
+ at com.xpn.xwiki.web.Utils.getContextComponentManager(Utils.java:695)
+ at com.xpn.xwiki.web.Utils.getComponent(Utils.java:752)
+ at com.xpn.xwiki.web.Utils.getComponent(Utils.java:719)
+ at com.xpn.xwiki.web.XWikiRequestProcessor.processPath(XWikiRequestProcessor.java:47)
+ at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:154)
+ at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1913)
+ at org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:449)
+ at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+ at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+ at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:769)
+ 
+____________________________
+java.lang.NullPointerException
+ at com.xpn.xwiki.web.Utils.getContextComponentManager(Utils.java:695)
+ at com.xpn.xwiki.web.Utils.getComponent(Utils.java:752)
+ at com.xpn.xwiki.web.Utils.getComponent(Utils.java:719)
+ at com.xpn.xwiki.web.XWikiRequestProcessor.processPath(XWikiRequestProcessor.java:47)
+ at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:154)
+ at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1913)
+ at org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:449)
+ at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+ at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+ at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:769)
+ 

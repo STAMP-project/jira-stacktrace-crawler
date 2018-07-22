@@ -1,0 +1,38 @@
+____________________________
+org.xwiki.rendering.macro.MacroExecutionException: Failed to highlight content
+ at org.xwiki.rendering.internal.macro.code.CodeMacro.parseContent(CodeMacro.java:121)
+ at org.xwiki.rendering.internal.macro.code.CodeMacro.parseContent(CodeMacro.java:57)
+ at org.xwiki.rendering.macro.box.AbstractBoxMacro.execute(AbstractBoxMacro.java:141)
+ at org.xwiki.rendering.macro.box.AbstractBoxMacro.execute(AbstractBoxMacro.java:53)
+ at org.xwiki.rendering.internal.transformation.macro.MacroTransformation.transform(MacroTransformation.java:269)
+ at org.xwiki.rendering.internal.transformation.DefaultRenderingContext.transformInContext(DefaultRenderingContext.java:183)
+ at org.xwiki.rendering.internal.transformation.DefaultTransformationManager.performTransformations(DefaultTransformationManager.java:95)
+ at org.xwiki.display.internal.DocumentContentDisplayer.display(DocumentContentDisplayer.java:263)
+ at org.xwiki.display.internal.DocumentContentDisplayer.display(DocumentContentDisplayer.java:131)
+ at org.xwiki.display.internal.DocumentContentDisplayer.display(DocumentContentDisplayer.java:58)
+ at org.xwiki.display.internal.DefaultDocumentDisplayer.display(DefaultDocumentDisplayer.java:96)
+ at org.xwiki.display.internal.DefaultDocumentDisplayer.display(DefaultDocumentDisplayer.java:39)
+ at org.xwiki.sheet.internal.SheetDocumentDisplayer.display(SheetDocumentDisplayer.java:123)
+ at org.xwiki.sheet.internal.SheetDocumentDisplayer.display(SheetDocumentDisplayer.java:52)
+ at org.xwiki.display.internal.ConfiguredDocumentDisplayer.display(ConfiguredDocumentDisplayer.java:68)
+ at org.xwiki.display.internal.ConfiguredDocumentDisplayer.display(ConfiguredDocumentDisplayer.java:42)
+ at com.xpn.xwiki.doc.XWikiDocument.getRenderedContent(XWikiDocument.java:1171)
+ at com.xpn.xwiki.doc.XWikiDocument.getRenderedContent(XWikiDocument.java:1134)
+ at com.xpn.xwiki.doc.XWikiDocument.getRenderedContent(XWikiDocument.java:1186)
+ at com.xpn.xwiki.api.Document.getRenderedContent(Document.java:717)
+ 
+____________________________
+Caused by: org.xwiki.component.manager.ComponentLookupException: Failed to lookup component [org.xwiki.rendering.internal.parser.pygments.PygmentsParser] identified by [role = [interface org.xwiki.rendering.parser.HighlightParser] hint = [default]]
+ at org.xwiki.component.embed.EmbeddableComponentManager.getComponentInstance(EmbeddableComponentManager.java:394)
+ at org.xwiki.component.embed.EmbeddableComponentManager.getInstance(EmbeddableComponentManager.java:190)
+ at org.xwiki.rendering.internal.macro.code.CodeMacro.highlight(CodeMacro.java:166)
+ at org.xwiki.rendering.internal.macro.code.CodeMacro.parseContent(CodeMacro.java:118)
+ 
+____________________________
+Caused by: org.xwiki.component.phase.InitializationException: Failed to find engine for Python script language
+ at org.xwiki.rendering.internal.parser.pygments.PygmentsParser.initialize(PygmentsParser.java:145)
+ at org.xwiki.component.embed.InitializableLifecycleHandler.handle(InitializableLifecycleHandler.java:39)
+ at org.xwiki.component.embed.EmbeddableComponentManager.createInstance(EmbeddableComponentManager.java:322)
+ at org.xwiki.component.embed.EmbeddableComponentManager.getComponentInstance(EmbeddableComponentManager.java:424)
+ at org.xwiki.component.embed.EmbeddableComponentManager.getComponentInstance(EmbeddableComponentManager.java:392)
+ 

@@ -1,0 +1,10 @@
+____________________________
+class java.lang.NullPointerException: null
+    at org.xwiki.wiki.user.internal.DefaultWikiUserConfigurationHelper.saveConfiguration(DefaultWikiUserConfigurationHelper.java:124)
+    at org.xwiki.wiki.user.internal.DefaultWikiUserManager.setMembershipType(DefaultWikiUserManager.java:102)
+    at org.xwiki.platform.wiki.creationjob.internal.steps.SaveWikiMetaDataStep.execute(SaveWikiMetaDataStep.java:77)
+    at org.xwiki.platform.wiki.creationjob.internal.WikiCreationJob.runInternal(WikiCreationJob.java:78)
+    at org.xwiki.job.internal.AbstractJob.runInContext(AbstractJob.java:209)
+    at org.xwiki.job.internal.AbstractJob.run(AbstractJob.java:192)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+    
