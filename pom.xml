@@ -7,17 +7,72 @@
     <groupId>nl.tudelft.crawler</groupId>
     <artifactId>JiraCrawler</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <inceptionYear>2017</inceptionYear>
+    <organization>
+        <name>Delft University of Technology</name>
+        <url>https://www.tudelft.nl</url>
+    </organization>
+    <licenses>
+        <license>
+            <name>Apache License version 2.0</name>
+            <url>https://spdx.org/licenses/Apache-2.0</url>
+        </license>
+    </licenses>
+
+    <properties>
+        <license.licenseName>apache_v2</license.licenseName>
+        <license-maven-plugin.version>1.16</license-maven-plugin.version>
+    </properties>
+
     <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
-                </configuration>
-            </plugin>
-        </plugins>
+            <plugins>
+
+                <!--<plugin>-->
+                    <!--<groupId>com.mycila</groupId>-->
+                    <!--<artifactId>license-maven-plugin</artifactId>-->
+                    <!--<version>3.0</version>-->
+                    <!--<configuration>-->
+                        <!--<excludes>-->
+                            <!--<exclude>**/README</exclude>-->
+                            <!--<exclude>stack_traces/**</exclude>-->
+                        <!--</excludes>-->
+                    <!--</configuration>-->
+                <!--</plugin>-->
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>license-maven-plugin</artifactId>
+                    <version>${license-maven-plugin.version}</version>
+                    <executions>
+                        <execution>
+                            <id>update-file-header</id>
+                            <goals>
+                                <goal>update-file-header</goal>
+                            </goals>
+                        </execution>
+                        <execution>
+                            <id>download-licenses</id>
+                            <goals>
+                                <goal>download-licenses</goal>
+                            </goals>
+                        </execution>
+                        <execution>
+                            <id>update-project-license</id>
+                            <goals>
+                                <goal>update-project-license</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>1.7</source>
+                        <target>1.7</target>
+                    </configuration>
+                </plugin>
+
+            </plugins>
     </build>
 
     <dependencies>
